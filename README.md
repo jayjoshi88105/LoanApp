@@ -1,4 +1,4 @@
-### **[Click here to see Postman Collection](https://documenter.getpostman.com/view/529680/UVkjvxPz)**
+### 
 
 ## Installation
 
@@ -14,7 +14,7 @@
 ## Process to test App
 
 - User will test this webApp in `Postman`. To download Postman **[Click here](https://www.postman.com/downloads/)**
-- User have to import collection in Postmana which I have attched with mail
+- User have to import collection. **[Click here to see Postman Collection](https://documenter.getpostman.com/view/529680/UVkjvxPz)**
 - To use All the Loan Processs API, User have to create one token by using `register` or `login` API
 
 ## Project Documentation
