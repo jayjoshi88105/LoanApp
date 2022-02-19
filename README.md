@@ -6,7 +6,7 @@
 #### `git clone https://github.com/jayjoshi88105/LoanApp.git`
 ### Step 2. To install LoanApp
 #### `composer install`
-### Step 3. To create migration
+### Step 3. To migration database
 #### `php artisan migrate`
 ### Step 4. To run the application
 #### `php artisan serve`
