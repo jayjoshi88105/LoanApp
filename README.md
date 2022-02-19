@@ -1,8 +1,11 @@
 ### **[Click here to see Postman Collection](https://documenter.getpostman.com/view/529680/UVkjvxPz)**
 
-## Helpful Commands
+## Installation
 
-### `php artisan serve`
+### Step 1. To checkout LoanApp in local run `git clone https://github.com/jayjoshi88105/LoanApp.git`
+### Step 2. To install LoanApp run `composer install`
+### Step 3. To create migration run `php artisan migrate`
+### Step 4. To run the application run `php artisan serve`
 
 ## Process to test App
 
@@ -68,6 +71,23 @@
 
 ![image](https://user-images.githubusercontent.com/62538358/154795238-22f04541-566b-4da5-a5c9-97d0701d7105.png)
 
+
+## Process to perform Feature Test
+- To perform `Authentication` test, run `./vendor/bin/phpunit .\tests\Feature\AuthTest.php`
+
+![image](https://user-images.githubusercontent.com/62538358/154795840-f72e6415-0986-4aea-9b2e-4245b20c8aee.png)
+
+- To perform `Add Loan Application` test, run `./vendor/bin/phpunit --filter testAddLoan .\tests\Feature\LoanTest.php`
+
+![image](https://user-images.githubusercontent.com/62538358/154795905-1b6ba900-2cf3-48e4-8c5f-cc7048bcd6f4.png)
+
+- To perform `Show Loan Application` test, run `./vendor/bin/phpunit --filter testShowLoan .\tests\Feature\LoanTest.php`
+
+![image](https://user-images.githubusercontent.com/62538358/154795964-1ae7aaef-f8f4-40dd-9d64-5f0992e20201.png)
+
+- To perform `Repay Loan Installment` test, run `./vendor/bin/phpunit --filter testRepayLoan .\tests\Feature\LoanTest.php`
+
+![image](https://user-images.githubusercontent.com/62538358/154796031-4c157dce-b47b-48ca-b1da-a3916a22bd78.png)
 
 
 
