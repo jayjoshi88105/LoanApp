@@ -3,10 +3,13 @@
 ## Installation
 
 ### Step 1. To checkout LoanApp in local run 
-`git clone https://github.com/jayjoshi88105/LoanApp.git`
-### Step 2. To install LoanApp run `composer install`
-### Step 3. To create migration run `php artisan migrate`
-### Step 4. To run the application run `php artisan serve`
+#### `git clone https://github.com/jayjoshi88105/LoanApp.git`
+### Step 2. To install LoanApp run 
+#### `composer install`
+### Step 3. To create migration run 
+#### `php artisan migrate`
+### Step 4. To run the application run 
+#### `php artisan serve`
 
 ## Process to test App
 
