@@ -1,61 +1,74 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+### **[Click here to see Postman Collection](https://documenter.getpostman.com/view/529680/UVkjvxPz)**
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/d/total.svg" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
-</p>
+## Helpful Commands
 
-## About Laravel
+### `php artisan serve`
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## Process to test App
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+- User will test this webApp in `Postman`
+- User have to import collection in Postmana which I have attched with mail
+- To use All the Loan Processs API, User have to create one token by using `register` or `login`
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## API Documantation
 
-## Learning Laravel
+### Register
+`http://localhost:8000/api/register`
+- Method `POST`
+- By using this API, Customer can be created and in responce `token` will be genereted.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+![image](https://user-images.githubusercontent.com/62538358/154794382-092772e6-b65d-4699-898f-70f157dc61b7.png)
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+### Login
+`http://localhost:8000/api/login`
+- Method `POST`
+- By using this API, `token` will come as  response and it will be used to access all other process for Loan
 
-## Laravel Sponsors
+![image](https://user-images.githubusercontent.com/62538358/154794824-eed310ae-0d7e-429d-b939-8f2d6a9f94c4.png)
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
 
-### Premium Partners
+### Add Loan Application
+`http://localhost:8000/api/loans`
+- Method `POST`
+- By using this API new loan application will be created with `token` authentication
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[OP.GG](https://op.gg)**
+![image](https://user-images.githubusercontent.com/62538358/154794915-cbefeff4-d523-4362-b6d7-4b9771fc0a06.png)
 
-## Contributing
+### Show Loan Applications
+`http://localhost:8000/api/loans`
+- Method `GET`
+- By using this API all the loan applications will be shown with `token` authentication
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+![image](https://user-images.githubusercontent.com/62538358/154794965-eb141335-fcb1-4a0c-8a91-ad13647769ba.png)
 
-## Code of Conduct
+### Show Single Loan Application
+`http://localhost:8000/api/loans/1`
+- Method `GET`
+- By using this API Single loan application will be shown with `token` authentication
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+![image](https://user-images.githubusercontent.com/62538358/154795010-f0f2dedf-c9a8-4ff5-b733-6a9afd09d2b7.png)
 
-## Security Vulnerabilities
+### Approve Loan Application
+`http://localhost:8000/api/approveloan`
+- Method `POST`
+- By using this API loan application will be approved with `token` authentication
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+![image](https://user-images.githubusercontent.com/62538358/154795043-1b139b6d-ff22-4b6d-8f50-73b1c263c353.png)
 
-## License
+### Repay Loan amount
+`http://localhost:8000/api/repayment`
+- Method `POST`
+- By using this API loan replayment can be done with `token` authentication
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+- `When user repays on time, below output will come`
+
+![image](https://user-images.githubusercontent.com/62538358/154795177-6eb7eb4e-dd74-47c2-92d5-f6586e60d001.png)
+
+- `When user's payment is overdue, below output will come`
+
+![image](https://user-images.githubusercontent.com/62538358/154795238-22f04541-566b-4da5-a5c9-97d0701d7105.png)
+
+
+
+
+
