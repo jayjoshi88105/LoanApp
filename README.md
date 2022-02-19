@@ -17,7 +17,12 @@
 - User have to import collection in Postmana which I have attched with mail
 - To use All the Loan Processs API, User have to create one token by using `register` or `login`
 
-## API Documantation
+## Project Documentation
+- This project is a collection of APIs for Loan process from creating application to repayment of installments for loan
+- This WebApp is developed on `Laravel 8.0`
+- In this WebApp `Passport composer dependancy` is used to perform `Authentication` process for `REST API`
+
+## API Documentation
 
 ### Register
 `http://localhost:8000/api/register`
