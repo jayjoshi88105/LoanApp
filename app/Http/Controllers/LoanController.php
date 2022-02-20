@@ -46,10 +46,12 @@ class LoanController extends Controller
         $loan->applicant_name = $request->applicant_name;
         $loan->amount = $request->amount;
         $loan->loan_term = $request->loan_term;
+        $months = $request->loan_term * 12;
+        $weeks = $months * 4;
         $loan->phoneno = $request->phoneno;
         $loan->emailid = $request->emailid;
         $loan->loan_approve_date = Carbon::now()->format('Y-m-d');
-        $installmant = ($request->amount / $request->loan_term);
+        $installmant = ($request->amount / $weeks);
         $loan->next_installment_amount = $installmant;
  
         if (auth()->user()->loans()->save($loan))
